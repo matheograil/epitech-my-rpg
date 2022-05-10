@@ -13,7 +13,7 @@ void game_weather_rain_random(settings_t *settings)
     if (settings->game_weather->end_rain < settings->time
         && settings->time - settings->game_weather->last_update_rain
         > 1000000) {
-        if (rand() % 2 == 1) {
+        if (rand() % 1000 == 1) {
             settings->game_weather->end_rain = settings->time + 100000000;
         }
         settings->game_weather->last_update_rain = settings->time;
